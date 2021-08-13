@@ -19,7 +19,7 @@ function App() {
     if (Notification.permission === "granted") {
       navigator.serviceWorker.getRegistration()
         .then(function(reg) {
-          console.log(reg);
+          reg.showNotification("Hello world");
         });
     }
   }
